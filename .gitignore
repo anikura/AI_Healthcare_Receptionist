@@ -1,0 +1,6 @@
+.env
+secret.key
+__pycache__/
+*.wav
+*.mp3
+healthcare_bot.log

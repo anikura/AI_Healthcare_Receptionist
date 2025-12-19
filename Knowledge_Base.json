@@ -1,0 +1,171 @@
+{
+    "hospitalDetails": {
+      "name": "XYZ Hospital",
+      "address": "123 Health Street, New Delhi, India",
+      "contactNumbers": {
+        "generalInquiry": "+91-1234567890",
+        "emergencyHotline": "+91-9876543210",
+        "opdInquiry": "+91-1122334455"
+      },
+      "timings": {
+        "opdHours": "9:00 AM - 5:00 PM",
+        "visitingHours": "10:00 AM - 12:00 PM, 4:00 PM - 6:00 PM",
+        "emergencyServices": "24/7"
+      }
+    },
+    "departments": [
+      {
+        "name": "Cardiology",
+        "description": "Specializes in heart and cardiovascular treatments."
+      },
+      {
+        "name": "Neurology",
+        "description": "Focuses on brain and nervous system disorders."
+      },
+      {
+        "name": "Pediatrics",
+        "description": "Cares for infants, children, and adolescents."
+      },
+      {
+        "name": "Orthopedics",
+        "description": "Treats bone and joint-related conditions."
+      },
+      {
+        "name": "Gynecology",
+        "description": "Handles women's reproductive health."
+      }
+    ],
+    "doctors": [
+      {
+        "name": "Dr. Reddy",
+        "specialization": "Anesthesiology", 
+        "consultationHours": "2:00 PM - 5:00 PM"
+      },
+      {
+        "name": "Dr. Verma",
+        "specialization": "Cardiology",
+        "consultationHours": "10:00 AM - 1:00 PM"
+      },
+      {
+        "name": "Dr. Banerjee",
+        "specialization": "Cardiology",
+        "consultationHours": "9:00 AM - 12:00 PM"
+      },
+      {
+        "name": "Dr. Singh",
+        "specialization": "Dermatology",
+        "consultationHours": "3:00 PM - 6:00 PM"
+      },
+      {
+        "name": "Dr. Das",
+        "specialization": "Endocrinology",
+        "consultationHours": "3:00 PM - 6:00 PM"
+      },
+      {
+        "name": "Dr. Nair", 
+        "specialization": "ENT (Ear, Nose, Throat)",
+        "consultationHours": "10:00 AM - 1:00 PM"
+      },
+      {
+        "name": "Dr. Saxena",
+        "specialization": "Gastroenterology",
+        "consultationHours": "1:00 PM - 4:00 PM"
+      },
+      {
+        "name": "Dr. Patel",
+        "specialization": "General Medicine",
+        "consultationHours": "8:00 AM - 11:00 AM"
+      },
+      {
+        "name": "Dr. Kapoor",
+        "specialization": "Gynecology",
+        "consultationHours": "11:00 AM - 2:00 PM"
+      },
+      {
+        "name": "Dr. Mishra",
+        "specialization": "Hematology",
+        "consultationHours": "9:00 AM - 12:00 PM"
+      },
+      {
+        "name": "Dr. Khan",
+        "specialization": "Nephrology", 
+        "consultationHours": "8:00 AM - 11:00 AM"
+      },
+      {
+        "name": "Dr. Sharma",
+        "specialization": "Neurology",
+        "consultationHours": "2:00 PM - 5:00 PM"
+      },
+      {
+        "name": "Dr. Bose",
+        "specialization": "Oncology",
+        "consultationHours": "2:00 PM - 5:00 PM"
+      },
+      {
+        "name": "Dr. Roy",
+        "specialization": "Orthopedics",
+        "consultationHours": "9:00 AM - 12:00 PM"
+      },
+      {
+        "name": "Dr. Mehta",
+        "specialization": "Pediatrics",
+        "consultationHours": "1:00 PM - 4:00 PM"
+      },
+      {
+        "name": "Dr. Gupta",
+        "specialization": "Pediatrics",
+        "consultationHours": "3:00 PM - 6:00 PM"
+      },
+      {
+        "name": "Dr. Ahuja",
+        "specialization": "Psychiatry",
+        "consultationHours": "1:00 PM - 4:00 PM"
+      },
+      {
+        "name": "Dr. Thomas",
+        "specialization": "Pulmonology",
+        "consultationHours": "10:00 AM - 1:00 PM"
+      },
+      {
+        "name": "Dr. Iyer",
+        "specialization": "Radiology",
+        "consultationHours": "11:00 AM - 2:00 PM"
+      },
+      {
+        "name": "Dr. Aggarwal",
+        "specialization": "Urology",
+        "consultationHours": "11:00 AM - 2:00 PM"
+      }
+    ],
+    "locations": {
+      "departments": {
+        "Cardiology": { "floor": "2nd Floor" },
+        "Neurology": { "floor": "3rd Floor" },
+        "Pediatrics": { "floor": "4th Floor" },
+        "Orthopedics": { "floor": "2nd Floor" },
+        "Gynecology": { "floor": "3rd Floor" }
+      },
+      "doctors": {
+        "Dr. Reddy": { "office": "A101" },
+        "Dr. Verma": { "office": "C102" },
+        "Dr. Banerjee": { "office": "C103" },
+        "Dr. Singh": { "office": "D201" },
+        "Dr. Das": { "office": "E202" },
+        "Dr. Nair": { "office": "F203" },
+        "Dr. Saxena": { "office": "G204" },
+        "Dr. Patel": { "office": "A105" },
+        "Dr. Kapoor": { "office": "G210" },
+        "Dr. Mishra": { "office": "H205" },
+        "Dr. Khan": { "office": "I101" },
+        "Dr. Sharma": { "office": "J212" },
+        "Dr. Bose": { "office": "K220" },
+        "Dr. Roy": { "office": "L230" },
+        "Dr. Mehta": { "office": "M240" },
+        "Dr. Gupta": { "office": "N250" },
+        "Dr. Ahuja": { "office": "O260" },
+        "Dr. Thomas": { "office": "P270" },
+        "Dr. Iyer": { "office": "Q280" },
+        "Dr. Aggarwal": { "office": "R290" }
+      }
+    }
+}

@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: healthcare-chatbot
+    ports:
+      - "8501:8501"
+    environment:
+      - APP_ENV=development
+      - MONGO_URI=${MONGO_URI}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - DB_NAME=${DB_NAME:-healthcare_assistant}
+      - CLAUDE_MODEL=${CLAUDE_MODEL:-claude-sonnet-4-20250514}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    volumes:
+      - ./:/app
+      - app-logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - healthcare-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  mongodb:
+    image: mongo:7.0
+    container_name: healthcare-mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password123
+      - MONGO_INITDB_DATABASE=healthcare_assistant
+    volumes:
+      - mongodb-data:/data/db
+      - mongodb-config:/data/configdb
+    restart: unless-stopped
+    networks:
+      - healthcare-network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: healthcare-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+    networks:
+      - healthcare-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  healthcare-network:
+    driver: bridge
+
+volumes:
+  mongodb-data:
+  mongodb-config:
+  redis-data:
+  app-logs:
