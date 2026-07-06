@@ -31,7 +31,6 @@ A sophisticated, full-stack virtual healthcare assistant designed to streamline 
 * Python 3.8+
 * MongoDB Atlas account (or local MongoDB)
 * Anthropic API Key
-* Asus Vivo 15s OLED (or similar development environment)
 
 ## 🔧 Installation & Setup
 
